@@ -8,16 +8,15 @@ const row = document.createElement("div")
 row.className = "row";
 row.id = "row";
 
-//function makes a row of cells
-//function makeRow() {
-   
-    grid.appendChild(cell);
+//Create a row inside gridContainer
+grid.appendChild(row);
 
-//}
+//Make a cell inside of row x 16
+for(let i=0; i<16; i++) {
+    row.appendChild(cell.cloneNode(true));
+}
 
-//Make 16 rows of the cells
-/*function makeGrid() {
-    for (let i = 0; 1 < 16; i++) {
-        grid.makeRow;
-    }
-}*/
+//Make a row of 16 cells
+
+
+//Make 16 rows of 16 cells
