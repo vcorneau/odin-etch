@@ -25,14 +25,14 @@ function createGrid() {
 }
 createGrid();
 
-function changeCellColor() {
-    document.getElementById("cell").id = "selectedCell";
+function changeCellClass() {
+    document.getElementById("cell").setAttribute("class", "selectedCell");
     console.log("I did it");
 }
 
 
-addEventListener(
-    "mouseover", changeCellColor
+document.addEventListener(
+    "mouseover", changeCellClass
 )
 
 
