@@ -16,14 +16,24 @@ function makeRowCells() {
     }
 }
 
-//Make 16 rows of 16 cells. Right now, increases number of cells each row. Need to fix.
+//Make 16 rows of 16 cells. 
 function createGrid() {
     makeRowCells();
     for(let i=0; i<16; i++){
         grid.appendChild(row.cloneNode(true));
     }
 }
-
 createGrid();
+
+function changeCellColor() {
+    document.getElementById("cell").id = "selectedCell";
+    console.log("I did it");
+}
+
+
+addEventListener(
+    "mouseover", changeCellColor
+)
+
 
 
