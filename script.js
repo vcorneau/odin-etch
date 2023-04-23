@@ -10,18 +10,20 @@ row.id = "row";
 
 const sizeButton = document.getElementById("sizeButton");
 
+let gridSize = 50;
 
-//Make 16 cells inside of row
+
+//Make a row of cells equalt to gridSize
 function makeRowCells() {
-    for(let i=0; i<16; i++) {
+    for(let i=0; i<gridSize; i++) {
         row.appendChild(cell.cloneNode(true));
     }
 }
 
-//Make 16 rows of 16 cells. 
+//Make a square grid where the size is determined by gridSize
 function createGrid() {
     makeRowCells();
-    for(let i=0; i<16; i++){
+    for(let i=0; i<gridSize; i++){
         grid.appendChild(row.cloneNode(true));
     }
 }
@@ -36,7 +38,6 @@ cells.forEach(cell => {
         cell.setAttribute("class", "selectedCell");
     })
 })
-
 
 
 
