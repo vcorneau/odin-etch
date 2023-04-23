@@ -8,9 +8,15 @@ const row = document.createElement("div");
 row.className = "row";
 row.id = "row";
 
-const sizeButton = document.getElementById("sizeButton");
+const button = document.querySelector(".button");
 
-let gridSize = 50;
+function promptUser() {
+    let userInput = prompt("Grid how big?");
+    let userInt = parseInt(userInput);
+    return userInt;
+}
+
+button.addEventListener("click",promptUser);
 
 
 //Make a row of cells equalt to gridSize
@@ -27,14 +33,14 @@ function createGrid() {
         grid.appendChild(row.cloneNode(true));
     }
 }
-createGrid();
+
 
 
 //Changes cell color on mouseover
 const cells = document.querySelectorAll(".cell");
 
 cells.forEach(cell => {
-    cell.addEventListener("mouseover", function changeCellClass() {
+    cell.addEventListener("mouseover", function() {
         cell.setAttribute("class", "selectedCell");
     })
 })
