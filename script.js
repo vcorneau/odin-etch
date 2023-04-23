@@ -25,14 +25,13 @@ function createGrid() {
 }
 createGrid();
 
-function changeCellClass() {
-    document.getElementById("cell").setAttribute("class", "selectedCell");
-    console.log("I did it");
-}
+const cells = document.querySelectorAll(".cell");
 
+cells.forEach(cell => {
+    cell.addEventListener("mouseover", function changeCellClass() {
+        cell.setAttribute("class", "selectedCell");
+    })
+})
 
-document.getElementById("cell").addEventListener(
-    "mouseover", changeCellClass
-)
 
 
