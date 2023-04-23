@@ -11,12 +11,15 @@ row.id = "row";
 const button = document.querySelector(".button");
 
 function promptUser() {
+    grid.replaceChildren();
+    
     let userInput = prompt("Grid how big?");
     let userInt = parseInt(userInput);
     console.log(userInt);
 
     //Make a row of cells equalt to gridSize
     function makeRowCells() {
+        row.replaceChildren();
         for(let i=0; i<userInt; i++) {
             row.appendChild(cell.cloneNode(true));
         }
