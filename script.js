@@ -31,9 +31,8 @@ function changeCellClass() {
 }
 
 
-document.addEventListener(
+document.getElementById("cell").addEventListener(
     "mouseover", changeCellClass
 )
-
 
 
