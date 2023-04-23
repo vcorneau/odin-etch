@@ -8,6 +8,8 @@ const row = document.createElement("div");
 row.className = "row";
 row.id = "row";
 
+const sizeButton = document.getElementById("sizeButton");
+
 
 //Make 16 cells inside of row
 function makeRowCells() {
@@ -25,6 +27,8 @@ function createGrid() {
 }
 createGrid();
 
+
+//Changes cell color on mouseover
 const cells = document.querySelectorAll(".cell");
 
 cells.forEach(cell => {
@@ -32,6 +36,7 @@ cells.forEach(cell => {
         cell.setAttribute("class", "selectedCell");
     })
 })
+
 
 
 
