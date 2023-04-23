@@ -13,27 +13,28 @@ const button = document.querySelector(".button");
 function promptUser() {
     let userInput = prompt("Grid how big?");
     let userInt = parseInt(userInput);
-    return userInt;
+    console.log(userInt);
+
+    //Make a row of cells equalt to gridSize
+    function makeRowCells() {
+        for(let i=0; i<userInt; i++) {
+            row.appendChild(cell.cloneNode(true));
+        }
+    }
+
+    //Make a square grid where the size is determined by gridSize
+    function createGrid() {
+        makeRowCells();
+        for(let i=0; i<userInt; i++){
+            grid.appendChild(row.cloneNode(true));
+        }
+    }
+
+    createGrid();
+    
 }
 
 button.addEventListener("click",promptUser);
-
-
-//Make a row of cells equalt to gridSize
-function makeRowCells() {
-    for(let i=0; i<gridSize; i++) {
-        row.appendChild(cell.cloneNode(true));
-    }
-}
-
-//Make a square grid where the size is determined by gridSize
-function createGrid() {
-    makeRowCells();
-    for(let i=0; i<gridSize; i++){
-        grid.appendChild(row.cloneNode(true));
-    }
-}
-
 
 
 //Changes cell color on mouseover
