@@ -31,20 +31,22 @@ function promptUser() {
     }
 
     createGrid();
+
+    //Changes cell color on mouseover
+    const cells = document.querySelectorAll(".cell");
+
+    cells.forEach(cell => {
+        cell.addEventListener("mouseover", function() {
+            cell.setAttribute("class", "selectedCell");
+        })
+    })
     
 }
 
 button.addEventListener("click",promptUser);
 
 
-//Changes cell color on mouseover
-const cells = document.querySelectorAll(".cell");
 
-cells.forEach(cell => {
-    cell.addEventListener("mouseover", function() {
-        cell.setAttribute("class", "selectedCell");
-    })
-})
 
 
 
